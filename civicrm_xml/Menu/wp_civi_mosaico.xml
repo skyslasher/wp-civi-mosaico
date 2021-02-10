@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<menu>
+  <!-- ajax route for Wordpress posts -->
+  <item>
+      <path>civicrm/wp_civi_mosaico/wp-posts</path>
+      <page_callback>CRM_WpCiviMosaico_Utils::getAjaxPosts</page_callback>
+      <title>Integration with Mosaico</title>
+      <access_arguments>access CiviMail;create mailings;edit message templates</access_arguments>
+  </item>
+  <!-- this is the proxy of the default Mosaico URL route for image upload and galleries -->
+  <item>
+      <path>civicrm/wp_civi_mosaico/upload</path>
+      <page_callback>CRM_WpCiviMosaico_Utils::processUpload</page_callback>
+      <title>Integration with Mosaico</title>
+      <access_arguments>access CiviMail;create mailings;edit message templates</access_arguments>
+  </item>
+  <!-- this is the proxy of the default Mosaico URL route for image processing -->
+  <item>
+      <path>civicrm/wp_civi_mosaico/img</path>
+      <page_callback>CRM_WpCiviMosaico_Utils::processImg</page_callback>
+      <title>Integration with Mosaico</title>
+      <access_callback>1</access_callback>
+      <is_public>true</is_public>
+  </item>
+</menu>
